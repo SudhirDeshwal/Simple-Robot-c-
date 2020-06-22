@@ -32,43 +32,74 @@ namespace Week_5_Lab
         private void btnGoTen_Click(object sender, EventArgs e)
         {
 
-            string i= m.DistanceChange(150).ToString();
-            listviewHistory.Items.Add(i);
-           // m.DistanceChange(150);
-            pictPointer.Location = new Point(m.X, m.Y);
+          //  string i= m.DistanceChange(150).ToString();
+            //listviewHistory.Items.Add("X"+ m.X.ToString());
+            //listviewHistory.Items.Add("Y"+m.Y.ToString());
+            //listviewHistory.Items.Add("Distance"+ i);
+
+            m.DistanceChange(150);
+          //  pictPointer.Location = new Point(m.X, m.Y);
+
+            //lblXaxis.Text = m.X.ToString();
+            //lblYaxis.Text = m.Y.ToString();
 
         }
 
         private void btnGoOne_Click(object sender, EventArgs e)
         {
+            // string i = m.DistanceChange(50).ToString();
             m.DistanceChange(50);
-            pictPointer.Location = new Point(m.X, m.Y);
+            //listviewHistory.Items.Add("X :" + m.X.ToString());
+            //listviewHistory.Items.Add("Y :" + m.Y.ToString());
+            //listviewHistory.Items.Add("Distance :" + i);
         }
 
         private void btnNorthTop_Click(object sender, EventArgs e)
         {
-           
-            pictPointer.Location = new Point(m.X, m.Y-m.Distance);
-            label1.Text = m.X.ToString();
-            label2.Text = m.Y.ToString();
+            pictPointer.Location = new Point(m.X, m.Y-=m.Distance);
+            lblXaxis.Text = m.X.ToString();
+            lblYaxis.Text = (m.Y - m.Distance).ToString();
+
+            listviewHistory.Items.Add("X :" + m.X.ToString());
+            listviewHistory.Items.Add("Y :" + (m.Y-m.Distance).ToString());
+            listviewHistory.Items.Add("Distance :" + m.Distance);
         }
 
         private void btnSouthDown_Click(object sender, EventArgs e)
         {
-            pictPointer.Location = new Point(m.X, m.Y+m.Distance);
-            label1.Text = m.X.ToString();
-            label2.Text = m.Y.ToString();
+            pictPointer.Location = new Point(m.X, m.Y+=m.Distance);
+            lblXaxis.Text = m.X.ToString();
+            lblYaxis.Text = (m.Y + m.Distance).ToString();
+
+            listviewHistory.Items.Add("X :" + m.X.ToString());
+            listviewHistory.Items.Add("Y :" + (m.Y+=m.Distance).ToString());
+            listviewHistory.Items.Add("Distance :" + m.Distance);
 
         }
 
         private void btnWestLeft_Click(object sender, EventArgs e)
         {
-            pictPointer.Location = new Point(m.X-m.Distance, m.Y);
+            pictPointer.Location = new Point(m.X-=m.Distance, m.Y);
+
+            lblXaxis.Text = (m.X - m.Distance).ToString();
+            lblYaxis.Text = m.Y.ToString();
+
+            listviewHistory.Items.Add("X :" + (m.X-=m.Distance).ToString());
+            listviewHistory.Items.Add("Y :" + m.Y.ToString());
+            listviewHistory.Items.Add("Distance :" + m.Distance);
         }
 
         private void btnEastRight_Click(object sender, EventArgs e)
         {
-            pictPointer.Location = new Point(m.X+m.Distance, m.Y);
+            pictPointer.Location = new Point(m.X+=m.Distance, m.Y);
+
+            lblXaxis.Text = (m.X + m.Distance).ToString();
+            lblYaxis.Text = m.Y.ToString();
+
+
+            listviewHistory.Items.Add("X :" + (m.X+m.Distance).ToString());
+            listviewHistory.Items.Add("Y :" + m.Y.ToString());
+            listviewHistory.Items.Add("Distance :" + m.Distance);
         }
     }
 }

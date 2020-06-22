@@ -40,7 +40,7 @@ namespace Week_5_Lab
         }
         public int DistanceChange(int newdistance)
         {
-            history.Add(newdistance.ToString());
+          //  history.Add(newdistance.ToString());
             return this.Distance = newdistance;
 
         }

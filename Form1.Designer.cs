@@ -38,20 +38,26 @@
             this.btnSouthDown = new System.Windows.Forms.Button();
             this.btnNorthTop = new System.Windows.Forms.Button();
             this.pictPointer = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblXaxis = new System.Windows.Forms.Label();
+            this.lblYaxis = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictPointer)).BeginInit();
             this.SuspendLayout();
             // 
             // listviewHistory
             // 
+            this.listviewHistory.BackColor = System.Drawing.Color.MediumPurple;
+            this.listviewHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
             this.listviewHistory.HideSelection = false;
-            this.listviewHistory.Location = new System.Drawing.Point(744, 12);
+            this.listviewHistory.Location = new System.Drawing.Point(732, 29);
             this.listviewHistory.Name = "listviewHistory";
             this.listviewHistory.Size = new System.Drawing.Size(263, 500);
             this.listviewHistory.TabIndex = 0;
             this.listviewHistory.UseCompatibleStateImageBehavior = false;
+            this.listviewHistory.View = System.Windows.Forms.View.Details;
             // 
             // btnExit
             // 
@@ -132,41 +138,55 @@
             this.pictPointer.TabIndex = 9;
             this.pictPointer.TabStop = false;
             // 
-            // button1
+            // lblXaxis
             // 
-            this.button1.Location = new System.Drawing.Point(744, 564);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblXaxis.AutoSize = true;
+            this.lblXaxis.Location = new System.Drawing.Point(124, 12);
+            this.lblXaxis.Name = "lblXaxis";
+            this.lblXaxis.Size = new System.Drawing.Size(0, 17);
+            this.lblXaxis.TabIndex = 11;
+            // 
+            // lblYaxis
+            // 
+            this.lblYaxis.AutoSize = true;
+            this.lblYaxis.Location = new System.Drawing.Point(124, 45);
+            this.lblYaxis.Name = "lblYaxis";
+            this.lblYaxis.Size = new System.Drawing.Size(0, 17);
+            this.lblYaxis.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 12);
+            this.label1.Location = new System.Drawing.Point(25, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "labelX";
+            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Current X :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 12);
+            this.label2.Location = new System.Drawing.Point(25, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "hi";
+            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Current Y :";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "History";
+            this.columnHeader1.Width = 300;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightPink;
             this.ClientSize = new System.Drawing.Size(1040, 599);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblYaxis);
+            this.Controls.Add(this.lblXaxis);
             this.Controls.Add(this.pictPointer);
             this.Controls.Add(this.btnNorthTop);
             this.Controls.Add(this.btnSouthDown);
@@ -195,9 +215,11 @@
         private System.Windows.Forms.Button btnSouthDown;
         private System.Windows.Forms.Button btnNorthTop;
         private System.Windows.Forms.PictureBox pictPointer;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblXaxis;
+        private System.Windows.Forms.Label lblYaxis;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
